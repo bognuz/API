@@ -7,6 +7,9 @@
 </head>
 <body>
   <h1>Welcome to joke Api</h1>
+  <h2>The joke is generated automaticly by joke API</h2>
+  <hr>
+  <h3>The Joke</h3>
 
   <% if (locals.question) { %>
     <p><%= question %></p>
@@ -15,5 +18,10 @@
     <p>No joke available at the moment.</p>
   <% } %>
 
+  
+  <hr>
+  <form action="/" method="get">
+    <button type="submit">Generate New Joke</button>
+  </form>
 </body>
 </html>
