@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+
+  
+
+  border: 10px solid purple;
+  background-color: rgb(51, 100, 165);
+  height: 100vh;
+  color: antiquewhite;
+  padding: 20px; 
+}
+
+h1, h2, h3 {
+  font-size: 3rem;
+  text-align: left;
+}
+
+h2{
+  margin-top: 0px;
+ 
+}
+
+p {
+  font-size: 2rem;
+  margin-top: 0; 
+  text-align: left;
+}
+
+h3{
+  margin-top: 0px;
+}
+
+button {
+  background-color: purple;
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 1.6rem; 
+  border-radius: 50%;
+}

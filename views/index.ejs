@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Joke Api</title>
 </head>
 <body>
+  <div class="container">
   <h1>Welcome to joke Api</h1>
   <h2>The joke is generated automaticly by joke API</h2>
   <hr>
   <h3>The Joke</h3>
 
-  <% if (locals.question) { %>
+  <% if (locals.error) { %> 
+    <p><%= locals.error %></p> 
+  <% } else if (locals.question) { %>
     <p><%= question %></p>
     <p><%= answer %></p>
   <% } else { %>
@@ -21,7 +25,8 @@
   
   <hr>
   <form action="/" method="get">
-    <button type="submit">Generate New Joke</button>
+    <button class="button" type="submit">Generate New Joke</button>
   </form>
+</div>
 </body>
 </html>
