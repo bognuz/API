@@ -8,7 +8,12 @@
 <body>
   <h1>Welcome to joke Api</h1>
 
-  <p>Here comes your joke</p>
+  <% if (locals.question) { %>
+    <p><%= question %></p>
+    <p><%= answer %></p>
+  <% } else { %>
+    <p>No joke available at the moment.</p>
+  <% } %>
 
 </body>
 </html>

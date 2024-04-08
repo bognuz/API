@@ -8,9 +8,20 @@ const port = 3000;
 app.use(express.static('public'));
 
 
-app.get("/", (req, res) => {
 
-  res.render("index.ejs");
+
+
+
+app.get("/", async (req, res) => {
+
+  const joke = await axios.get("https://v2.jokeapi.dev/joke/Any");
+  res.render("index.ejs", {
+    question: joke.data.setup,
+    answer: joke.data.delivery
+  });
+
+  console.log(joke.data.setup);
+  console.log(joke.data.delivery);
 })
 
 
